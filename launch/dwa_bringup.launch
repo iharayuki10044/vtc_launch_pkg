@@ -8,8 +8,11 @@
     <arg name="robot_param" default="$(find vtc_launch_pkg)/config/robot_param.yaml"/>
     <arg name="dwa_param" default="$(find vtc_launch_pkg)/config/dwa_param.yaml"/>
 
+    <arg name="max_speed" default="10"/>
+    <arg name="max_yawrate" default="10"/>
+
     <!-- <vtc bring up> -->
-        <include file="$(find cage_ros_stack)/launch/bringup.launch">
+        <include file="$(find vtc_bringup)/launch/bringup.launch">
             <arg name="ip" value="192.168.0.74" />
         </include>
 
